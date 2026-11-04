@@ -31,7 +31,7 @@ permissions: write-all
 
 jobs:
   build:
-    uses: ./.github/workflows/WRT-CORE.yml
+    uses: ./.github/workflows/WRT-CORE-SELF.yml
     with:
       WRT_CONFIG: ${{ fromJSON('{"ALL":"mt7621","phicomm_k2p":"phicomm_k2p","XY-C5":"XY-C5-OWRT-WIFI-NO","JDCloud-RE-SP-01B":"JDCloud-RE-SP-01B"}')[inputs.DEVICE || 'ALL'] }}
       # Use Footstrap for both ALL and individual device builds.
