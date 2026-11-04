@@ -1,0 +1,5 @@
+# Xiaomi Mi Router 3G (original model, not v2) / ramips / mt7621
+# GENERAL.txt enables multi-profile builds; select only this device.
+CONFIG_TARGET_ramips=y
+CONFIG_TARGET_ramips_mt7621=y
+CONFIG_TARGET_DEVICE_ramips_mt7621_DEVICE_phicomm_k2p=y
