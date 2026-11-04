@@ -16,6 +16,7 @@ on:
           - xiaomi-R3G
           - XY-C5
           - JDCloud-RE-SP-01B
+          - phicomm_k2p
       PACKAGE:
         description: '手动调整插件包，多个请用换行符分隔。'
         required: false
@@ -32,7 +33,7 @@ jobs:
   build:
     uses: ./.github/workflows/WRT-CORE-SELF.yml
     with:
-      WRT_CONFIG: ${{ fromJSON('{"ALL":"mt7621","xiaomi-R3G":"Xiaomi-Mi-Router-3G","XY-C5":"XY-C5-OWRT-WIFI-NO","JDCloud-RE-SP-01B":"JDCloud-RE-SP-01B"}')[inputs.DEVICE || 'ALL'] }}
+      WRT_CONFIG: ${{ fromJSON('{"ALL":"mt7621","phicomm_k2p":"Xiaomi-Mi-Router-3G","XY-C5":"XY-C5-OWRT-WIFI-NO","JDCloud-RE-SP-01B":"JDCloud-RE-SP-01B"}')[inputs.DEVICE || 'ALL'] }}
       # Use Footstrap for both ALL and individual device builds.
       WRT_THEME: footstrap
       WRT_NAME: OWRT
